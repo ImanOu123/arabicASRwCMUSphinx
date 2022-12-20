@@ -7,44 +7,45 @@ from maha.processors import StreamFileProcessor
 from maha.cleaners.functions import numbers_to_text
 from maha.cleaners.functions import remove
 
-# os.remove("train-text1.txt")
+os.remove("train-text1.txt")
 
-# wf = open("train-text.txt", "w")
+wf = open("train-text.txt", "w")
 
-# dirNameLst = ["akhbarona/Test", "akhbarona/Train"]
+dirNameLst = ["akhbarona/Test"]
 
-# # iterate of files in directory
-# for dirName in dirNameLst:
-#     for dir in os.listdir(dirName):
-#         fName = os.path.join(dirName, dir)
-#         if os.path.isdir(fName):
-#             subDir = os.listdir(fName)
-#             for filename in subDir:
-#                 txtFile = os.path.join(fName, filename)
+# iterate on files in directory
 
-#                 # extract lines from file 
-#                 with open(txtFile) as f:
-#                     lines = f.readlines()
+for dirName in dirNameLst:
+    for dir in os.listdir(dirName):
+        fName = os.path.join(dirName, dir)
+        if os.path.isdir(fName):
+            subDir = os.listdir(fName)
+            for filename in subDir:
+                txtFile = os.path.join(fName, filename)
+
+                # extract lines from file 
+                with open(txtFile) as f:
+                    lines = f.readlines()
                 
-#                 if "// <![CDATA[\n" in lines:
-#                     lines = lines[:lines.index("// <![CDATA[\n")]
+                if "// <![CDATA[\n" in lines:
+                    lines = lines[:lines.index("// <![CDATA[\n")]
 
-#                 linesStr = "".join(lines).replace("Title\n", "").replace("Body\n", "")
+                linesStr = "".join(lines).replace("Title\n", "").replace("Body\n", "")
                     
-#                 wf.write(linesStr)
+                wf.write(linesStr)
 
-# wf.close()
+wf.close()
 
 # clean text in main training data file
 
-# resource_path = "train-text.txt"
+resource_path = "train-text.txt"
 
-# proc = StreamFileProcessor(resource_path)
-# proc = proc.normalize(all=True).drop_empty_lines().keep(arabic_letters=True, punctuations=True, english_numbers=True, arabic_numbers=True)
+proc = StreamFileProcessor(resource_path)
+proc = proc.normalize(all=True).drop_empty_lines().keep(arabic_letters=True, punctuations=True, english_numbers=True, arabic_numbers=True)
 
-# # To start processing the file, run the following commented code.
+# To start processing the file, run the following commented code.
 
-# proc.process_and_save(Path("train-text1.txt"))
+proc.process_and_save(Path("train-text1.txt"))
 
 
 with open("train-text1.txt") as f:

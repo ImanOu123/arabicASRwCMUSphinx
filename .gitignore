@@ -3,6 +3,9 @@ arabicASRLM/.DS_Store
 arabicASRLM/train-text.txt
 arabicASRLM/train-text1.txt
 arabicASRLM/train-text2.txt
+arabicASRLM/test-text.txt
+arabicASRLM/test-text1.txt
+arabicASRLM/test-text2.txt
 
 resources
 .DS_Store
