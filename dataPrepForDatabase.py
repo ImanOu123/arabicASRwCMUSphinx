@@ -61,10 +61,6 @@ def sortByUnderscoreNum(lst):
             if elem[underScoreIdx:].isdigit():
                 lstDic[int(elem[underScoreIdx:])] = elem
             
-    
-    # print(sorted(lstDic.items()))
-    # print(dict(sorted(lstDic.items())).values())
-
     return dict(sorted(lstDic.items())).values()
 
 sortedSpeakerLst = sortByUnderscoreNum(os.listdir("tempWav/arSpeechCommands"))
@@ -106,13 +102,16 @@ commFileIDFile.close()
 
 mediaSpeechFileLst = os.listdir("resources/MediaSpeech_AR")
 
-# list audio files
+# list audio and transcription files
 
 mediaSpeechAudioLst = []
+mediaSpeechTransLst = []
 
 for file in mediaSpeechFileLst:
     if file[-4:] == "flac":
         mediaSpeechAudioLst.append(file)
+    elif file[-3:] == "txt":
+        mediaSpeechTransLst.append(file)
 
 for i in range(31, len(mediaSpeechAudioLst)+1):
 
@@ -125,7 +124,48 @@ for i in range(31, len(mediaSpeechAudioLst)+1):
     datasetAudioPath = os.path.join("resources/MediaSpeech_AR/", mediaSpeechAudioLst[i-31])
     audioFilePath = os.path.join(speakerFolderPath, "file_" + str(n) + ".wav")
 
+    datasetTransPath = os.path.join("resources/MediaSpeech_AR/", mediaSpeechTransLst[i-31])
+    audioTransPath = os.path.join(speakerFolderPath, "file_" + str(n) + ".txt")
+
     shutil.copy2(datasetAudioPath, audioFilePath)
+    shutil.copy2(datasetTransPath, audioTransPath)
 
     n = n + 1
+
+# preparing transcriptions and fileid file for media speech files
+
+mediaTranscriptionFile = open("tempWav/mediaSpeech.transcription", "w")
+mediaFileIDFile = open("tempWav/mediaSpeech.fileids", "w")
+
+sortedSpeakerLst = sortByUnderscoreNum(os.listdir("tempWav/mediaSpeech"))
+for speaker in sortedSpeakerLst:
+    speakPath = "tempWav/mediaSpeech/" + speaker
+    if os.path.isdir(speakPath):
+        for file in os.listdir(speakPath):
+            if "file" in file:
+                print(file)
+                audioFileName = ""
+                transFileName = ""
+
+                if "wav" in file: 
+                    print("hi")
+                    audioFileName = file
+                if "txt" in file: 
+                    transFileName = file
+
+                # FIX - YOU WON'T GET THE TRANSCRIPT AND AUDIO FILE EVERYTIME YOU LOOP THROUGH THE DATASET
+                
+                f = open(os.path.join(speakPath, transFileName), "r")
+        
+                # add to transcription file
+                print(audioFileName[:-3])
+
+                transcriptionStr = "<s> " + f.read() + " </s>" + " (" + audioFileName + ")\n" 
+                mediaTranscriptionFile.write(transcriptionStr)
+                    
+                # add to fileid file
+                    
+                fileIDstr = speaker + "/" +  audioFileName + "\n"
+                mediaFileIDFile.write(fileIDstr)
+
 
