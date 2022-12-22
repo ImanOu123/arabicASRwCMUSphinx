@@ -7,8 +7,12 @@ arabicASRLM/test-text.txt
 arabicASRLM/test-text1.txt
 arabicASRLM/test-text2.txt
 
+arabicASRDatabase/wav
+
 tempWav/arSpeechCommands
 tempWav/mediaSpeech
+tempWav/wav
 
 resources
+__pycache__
 .DS_Store

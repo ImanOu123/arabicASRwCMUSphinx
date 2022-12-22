@@ -60,6 +60,10 @@ def sortByUnderscoreNum(lst):
             
             if elem[underScoreIdx:].isdigit():
                 lstDic[int(elem[underScoreIdx:])] = elem
+            else:
+                if ".wav" in elem:
+                    if elem[underScoreIdx:elem.find(".")].isdigit():
+                        lstDic[int(elem[underScoreIdx:elem.find(".")])] = elem
             
     return dict(sorted(lstDic.items())).values()
 
@@ -156,7 +160,7 @@ for speaker in sortedSpeakerLst:
             else:
                 audioFileName = files[1]
                 transFileName = files[0]
-
+            
             f = open(os.path.join(speakPath, transFileName), "r")
         
             # add to transcription file
@@ -168,5 +172,3 @@ for speaker in sortedSpeakerLst:
                     
             fileIDstr = speaker + "/" +  audioFileName[:-4] + "\n"
             mediaFileIDFile.write(fileIDstr)
-
-
