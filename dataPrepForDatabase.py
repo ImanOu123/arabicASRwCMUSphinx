@@ -138,34 +138,35 @@ mediaTranscriptionFile = open("tempWav/mediaSpeech.transcription", "w")
 mediaFileIDFile = open("tempWav/mediaSpeech.fileids", "w")
 
 sortedSpeakerLst = sortByUnderscoreNum(os.listdir("tempWav/mediaSpeech"))
+
 for speaker in sortedSpeakerLst:
     speakPath = "tempWav/mediaSpeech/" + speaker
     if os.path.isdir(speakPath):
-        for file in os.listdir(speakPath):
-            if "file" in file:
-                print(file)
-                audioFileName = ""
-                transFileName = ""
 
-                if "wav" in file: 
-                    print("hi")
-                    audioFileName = file
-                if "txt" in file: 
-                    transFileName = file
+        files = os.listdir(speakPath)
 
-                # FIX - YOU WON'T GET THE TRANSCRIPT AND AUDIO FILE EVERYTIME YOU LOOP THROUGH THE DATASET
-                
-                f = open(os.path.join(speakPath, transFileName), "r")
+        if "file" in files[0]:
+
+            audioFileName = ""
+            transFileName = ""
+
+            if "wav" in files[0]: 
+                audioFileName = files[0]
+                transFileName = files[1]
+            else:
+                audioFileName = files[1]
+                transFileName = files[0]
+
+            f = open(os.path.join(speakPath, transFileName), "r")
         
-                # add to transcription file
-                print(audioFileName[:-3])
+            # add to transcription file
 
-                transcriptionStr = "<s> " + f.read() + " </s>" + " (" + audioFileName + ")\n" 
-                mediaTranscriptionFile.write(transcriptionStr)
+            transcriptionStr = "<s> " + f.read() + " </s>" + " (" + audioFileName[:-4] + ")\n" 
+            mediaTranscriptionFile.write(transcriptionStr)
                     
-                # add to fileid file
+            # add to fileid file
                     
-                fileIDstr = speaker + "/" +  audioFileName + "\n"
-                mediaFileIDFile.write(fileIDstr)
+            fileIDstr = speaker + "/" +  audioFileName[:-4] + "\n"
+            mediaFileIDFile.write(fileIDstr)
 
 
