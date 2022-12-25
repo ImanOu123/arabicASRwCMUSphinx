@@ -1,0 +1,39 @@
+Current configuration:
+[NAME]		[DEFLT]	[VALUE]
+-dest_meanfn		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.cd_cont_initial/means
+-dest_mixwfn		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.cd_cont_initial/mixture_weights
+-dest_moddeffn		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.200.mdef
+-dest_tmatfn		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.cd_cont_initial/transition_matrices
+-dest_ts2cbfn		.cont.
+-dest_varfn		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.cd_cont_initial/variances
+-example	no	no
+-fullvar	no	no
+-help		no	no
+-src_meanfn		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/means
+-src_mixwfn		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/mixture_weights
+-src_moddeffn		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.ci.mdef
+-src_tmatfn		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/transition_matrices
+-src_ts2cbfn		.cont.
+-src_varfn		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/variances
+
+INFO: main.c(261): Reading src /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.ci.mdef
+INFO: model_def_io.c(573): Model definition info:
+INFO: model_def_io.c(574): 36 total models defined (36 base, 0 tri)
+INFO: model_def_io.c(575): 144 total states
+INFO: model_def_io.c(576): 108 total tied states
+INFO: model_def_io.c(577): 108 total tied CI states
+INFO: model_def_io.c(578): 36 total tied transition matrices
+INFO: model_def_io.c(579): 4 max state/model
+INFO: model_def_io.c(580): 4 min state/model
+INFO: main.c(278): Generating continous ts2cb mapping
+INFO: main.c(299): Reading src /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/mixture_weights
+INFO: s3mixw_io.c(117): Read /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/mixture_weights [108x1x1 array]
+INFO: main.c(309): Reading src /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/transition_matrices
+INFO: s3tmat_io.c(118): Read /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/transition_matrices [36x3x4 array]
+INFO: main.c(318): Reading src /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/means
+INFO: s3gau_io.c(169): Read /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/means [108x1x1 array]
+INFO: main.c(342): Reading src /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/variances
+INFO: s3gau_io.c(169): Read /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/variances [108x1x1 array]
+INFO: main.c(391): Reading dest /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.200.mdef
+ERROR: "model_def_io.c", line 413: Unable to open /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.200.mdef for reading: No such file or directory
+Sun Dec 25 11:52:15 2022

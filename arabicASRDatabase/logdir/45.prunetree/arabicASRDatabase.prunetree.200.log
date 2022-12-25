@@ -1,0 +1,54 @@
+Current configuration:
+[NAME]		[DEFLT]	[VALUE]
+-allphones	no	no
+-example	no	no
+-help		no	no
+-itreedir		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/trees/arabicASRDatabase.unpruned
+-minocc		0.0	0.000000e+00
+-moddeffn		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.alltriphones.mdef
+-nseno			200
+-otreedir		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/trees/arabicASRDatabase.200
+-psetfn			/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.tree_questions
+
+INFO: main.c(76): Reading: /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.alltriphones.mdef
+INFO: model_def_io.c(573): Model definition info:
+INFO: model_def_io.c(574): 65644 total models defined (36 base, 65608 tri)
+INFO: model_def_io.c(575): 262576 total states
+INFO: model_def_io.c(576): 196932 total tied states
+INFO: model_def_io.c(577): 108 total tied CI states
+INFO: model_def_io.c(578): 36 total tied transition matrices
+INFO: model_def_io.c(579): 4 max state/model
+INFO: model_def_io.c(580): 4 min state/model
+INFO: main.c(82): Reading: /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.tree_questions
+INFO: main.c(185): '-0	1 [0 < 0.000000e+00]
+INFO: main.c(185): '-1	1 [0 < 0.000000e+00]
+INFO: main.c(185): '-2	1 [0 < 0.000000e+00]
+INFO: main.c(185): <-0	1 [0 < 0.000000e+00]
+INFO: main.c(185): <-1	1 [0 < 0.000000e+00]
+INFO: main.c(185): <-2	1 [0 < 0.000000e+00]
+INFO: main.c(185): >-0	1 [0 < 0.000000e+00]
+INFO: main.c(185): >-1	1 [0 < 0.000000e+00]
+INFO: main.c(185): >-2	1 [0 < 0.000000e+00]
+INFO: main.c(185): A-0	3 [0 < 0.000000e+00]
+INFO: main.c(185): A-1	3 [0 < 0.000000e+00]
+INFO: main.c(185): A-2	3 [0 < 0.000000e+00]
+INFO: main.c(185): D-0	2 [0 < 0.000000e+00]
+INFO: main.c(185): D-1	2 [0 < 0.000000e+00]
+INFO: main.c(185): D-2	2 [0 < 0.000000e+00]
+INFO: main.c(185): E-0	2 [0 < 0.000000e+00]
+INFO: main.c(185): E-1	2 [0 < 0.000000e+00]
+INFO: main.c(185): E-2	2 [0 < 0.000000e+00]
+INFO: main.c(185): H-0	1 [0 < 0.000000e+00]
+INFO: main.c(185): H-1	1 [0 < 0.000000e+00]
+INFO: main.c(185): H-2	1 [0 < 0.000000e+00]
+INFO: main.c(185): S-0	2 [0 < 0.000000e+00]
+INFO: main.c(185): S-1	2 [0 < 0.000000e+00]
+INFO: main.c(185): S-2	2 [0 < 0.000000e+00]
+INFO: main.c(185): T-0	1 [0 < 0.000000e+00]
+INFO: main.c(185): T-1	1 [0 < 0.000000e+00]
+INFO: main.c(185): T-2	1 [0 < 0.000000e+00]
+INFO: main.c(185): Y-0	3 [0 < 0.000000e+00]
+INFO: main.c(185): Y-1	3 [0 < 0.000000e+00]
+INFO: main.c(185): Y-2	3 [0 < 0.000000e+00]
+FATAL: "main.c", line 167: Unable to open /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/trees/arabicASRDatabase.unpruned/Z-0.dtree for reading: No such file or directory
+Sun Dec 25 11:52:15 2022

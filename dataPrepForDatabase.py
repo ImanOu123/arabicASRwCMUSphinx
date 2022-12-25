@@ -113,9 +113,9 @@ mediaSpeechTransLst = []
 
 for file in mediaSpeechFileLst:
     if file[-4:] == "flac":
-        mediaSpeechAudioLst.append(file)
+        mediaSpeechAudioLst.append(file[:-4])
     elif file[-3:] == "txt":
-        mediaSpeechTransLst.append(file)
+        mediaSpeechTransLst.append(file[:-3])
 
 for i in range(31, len(mediaSpeechAudioLst)+1):
 
@@ -125,10 +125,10 @@ for i in range(31, len(mediaSpeechAudioLst)+1):
     shutil.rmtree(speakerFolderPath)
     os.mkdir(speakerFolderPath)
 
-    datasetAudioPath = os.path.join("resources/MediaSpeech_AR/", mediaSpeechAudioLst[i-31])
+    datasetAudioPath = "resources/MediaSpeech_AR/" +  mediaSpeechAudioLst[i-31] + "flac"
     audioFilePath = os.path.join(speakerFolderPath, "file_" + str(n) + ".wav")
 
-    datasetTransPath = os.path.join("resources/MediaSpeech_AR/", mediaSpeechTransLst[i-31])
+    datasetTransPath = "resources/MediaSpeech_AR/" + mediaSpeechAudioLst[i-31] + "txt"
     audioTransPath = os.path.join(speakerFolderPath, "file_" + str(n) + ".txt")
 
     shutil.copy2(datasetAudioPath, audioFilePath)

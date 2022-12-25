@@ -8,6 +8,10 @@ arabicASRLM/test-text1.txt
 arabicASRLM/test-text2.txt
 
 arabicASRDatabase/wav
+arabicASRDatabase/feat
+
+smallArabicASRDatabase/logdir
+smallArabicASRDatabase/wav
 
 tempWav/arSpeechCommands
 tempWav/mediaSpeech

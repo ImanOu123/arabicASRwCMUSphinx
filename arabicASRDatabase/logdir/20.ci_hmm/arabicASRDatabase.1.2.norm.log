@@ -1,0 +1,55 @@
+Current configuration:
+[NAME]		[DEFLT]	[VALUE]
+-accumdir		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/bwaccumdir/arabicASRDatabase_buff_1,
+-constE		3.0	3.000000e+00
+-dcountfn		
+-example	no	no
+-fullvar	no	no
+-help		no	no
+-inmeanfn		
+-inmixwfn		
+-invarfn		
+-meanfn			/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/means
+-mixwfn			/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/mixture_weights
+-mmie		no	no
+-oaccumdir		
+-regmatfn		
+-tiedvar	no	no
+-tmatfn			/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/transition_matrices
+-varfn			/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/variances
+
+INFO: main.c(207): Reading and accumulating counts from /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/bwaccumdir/arabicASRDatabase_buff_1
+INFO: s3mixw_io.c(117): Read /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/bwaccumdir/arabicASRDatabase_buff_1/mixw_counts [108x1x1 array]
+INFO: s3tmat_io.c(118): Read /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/bwaccumdir/arabicASRDatabase_buff_1/tmat_counts [36x3x4 array]
+INFO: s3gau_io.c(386): Read /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/bwaccumdir/arabicASRDatabase_buff_1/gauden_counts with means with vars (2pass) [108x1x1 vector arrays]
+INFO: main.c(321): -2passvar yes
+INFO: main.c(391): Normalizing mean for n_mgau= 108, n_stream= 1, n_density= 1
+WARN: "gauden.c", line 1565: (mgau= 12, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 13, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 14, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 33, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 34, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 35, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 42, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 43, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 44, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 69, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 70, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 71, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 84, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 85, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 86, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 90, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 91, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 92, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 105, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 106, feat= 0, density= 0) never observed
+WARN: "gauden.c", line 1565: (mgau= 107, feat= 0, density= 0) never observed
+INFO: main.c(414): Normalizing var
+INFO: s3mixw_io.c(233): Wrote /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/mixture_weights [108x1x1 array]
+INFO: s3tmat_io.c(176): Wrote /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/transition_matrices [36x3x4 array]
+INFO: s3gau_io.c(228): Wrote /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/means [108x1x1 array]
+INFO: s3gau_io.c(228): Wrote /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/variances [108x1x1 array]
+Sun Dec 25 11:51:26 2022
+Current Overall Likelihood Per Frame = -151.267821886836
+Convergence ratio = 0.951605447880269

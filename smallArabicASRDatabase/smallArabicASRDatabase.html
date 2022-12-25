@@ -1,0 +1,568 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="REFRESH" content="60">
+<title>smallArabicASRDatabase</title>
+<style type="text/css">
+body {
+ background: #f0f0f5;
+}
+p,span {
+ font-family: monospace;
+}
+p {
+ margin-right: 6em;
+}
+p.phase {
+ font-weight: bold;
+ margin-bottom: 0;
+}
+p.result, p.WARNING, p.error {
+ margin-top: 0;
+ margin-bottom: 0;
+ margin-left: 5em;
+}
+span.status {
+ float: right;
+ margin-top: -1em;
+}
+.passed, .completed {
+ color: #00D000;
+}
+.WARNING, .warning {
+ color: #555500;
+}
+.FAILED, .error {
+ color: #DD0000;
+}
+</style>
+</head>
+<body>
+<h1 class="experiment">/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase</h1>
+<h2 class="hostname">Training smallArabicASRDatabase on Imans-MacBook-Pro.local</h2>
+<hr>
+<h3>MODULE: 000 Computing feature from audio files	(2022-12-25 12:15)</h3>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/000.comp_feat/smallArabicASRDatabase.train-1-1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/000.comp_feat/smallArabicASRDatabase.test-1-1.log">Log File</a></p><span class='status completed'>completed</span>
+<p>Feature extraction is done</p>
+<hr>
+<h3>MODULE: 00 verify training files	(2022-12-25 12:15)</h3>
+<p class='phase'>Phase 1: Checking to see if the dict and filler dict agrees with the phonelist file.</p>
+<p class='result'>Found 43 words using 29 phones</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 2: Checking to make sure there are not duplicate entries in the dictionary</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 3: Check general format for the fileids file; utterance length (must be positive); files exist</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 4: Checking number of lines in the transcript file should match lines in fileids file</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 5: Determine amount of training data, see if n_tied_states seems reasonable.</p>
+<p class='result'>Estimated Total Hours Training: 3.1009</p>
+<p class='result'>This is a small amount of data, no comment at this time</p>
+<span class='status WARNING'>WARNING</span>
+<p class='phase'>Phase 6: Checking that all the words in the transcript are in the dictionary</p>
+<p class='result'>Words in dictionary: 40</p>
+<p class='result'>Words in filler dictionary: 3</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 7: Checking that all the phones in the transcript are in the phonelist, and all phones in the phonelist appear at least once</p>
+<span class='status passed'>passed</span>
+<hr>
+<h3>MODULE: 0000 train grapheme-to-phoneme model	(2022-12-25 12:15)</h3>
+<p>Skipped (set $CFG_G2P_MODEL = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 01 Train LDA transformation	(2022-12-25 12:15)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 02 Train MLLT transformation	(2022-12-25 12:15)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 05 Vector Quantization	(2022-12-25 12:15)</h3>
+<p>Skipped for continuous models</p>
+<hr>
+<h3>MODULE: 10 Training Context Independent models for forced alignment and VTLN	(2022-12-25 12:15)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...</span>
+<span class='progress'>models...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Flat initialize</p>
+<p class='result'>mk_mdef_gen <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.make_ci_mdef_fromphonelist.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>mk_flat <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.makeflat_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.initmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.normmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.initvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.normvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.cpmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.cpvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.1.1-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.1.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -157.281219430918</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.1.2-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.1.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -153.592774140841</p>
+<p class='result'>Convergence Ratio = 3.68844529007714</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.1.3-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.1.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -151.386335866648</p>
+<p class='result'>Convergence Ratio = 2.20643827419295</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 4 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.1.4-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.1.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.827000046581</p>
+<p class='result'>Convergence Ratio = 0.559335820066565</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 5 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.1.5-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.1.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.683314163272</p>
+<p class='result'>Convergence Ratio = 0.143685883309388</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 6 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.1.6-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/10.falign_ci_hmm/smallArabicASRDatabase.1.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.630641283355</p>
+<p class='result'>Training completed after 6 iterations</p>
+<hr>
+<h3>MODULE: 11 Force-aligning transcripts	(2022-12-25 12:16)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>logs...</span>
+<span class='progress'>output...</span>
+<span class='progress'>qmanager...</span>
+<span class='progress'>
+</span>
+<p class='phase'>Phase 3: Creating dictionary for alignment...</p>
+<p class='phase'>Phase 4: Creating transcript for alignment...</p>
+<p class='phase'>Phase 5: Running force alignment in  1 parts</p>
+<p class='result'>Force alignment starting: (1 of 1) </p>
+<p class='result'>sphinx3_align <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/11.force_align/smallArabicASRDatabase.1.falign.log">Log File</a></p><span class='status completed'>completed</span>
+<hr>
+<h3>MODULE: 12 Force-aligning data for VTLN	(2022-12-25 12:17)</h3>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 20 Training Context Independent models	(2022-12-25 12:17)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...</span>
+<span class='progress'>models...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Copy initialize from falign model</p>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/20.ci_hmm/smallArabicASRDatabase.1.1-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/20.ci_hmm/smallArabicASRDatabase.1.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.560142037616</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/20.ci_hmm/smallArabicASRDatabase.1.2-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/20.ci_hmm/smallArabicASRDatabase.1.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.540165758328</p>
+<p class='result'>Training completed after 2 iterations</p>
+<hr>
+<h3>MODULE: 30 Training Context Dependent models	(2022-12-25 12:17)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Initialization</p>
+<p class='result'>mk_mdef_gen <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/30.cd_hmm_untied/smallArabicASRDatabase.make_alltriphonelist.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_mixw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/30.cd_hmm_untied/smallArabicASRDatabase.copycitocd.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for iteration: 1 (1 of 1) </p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/30.cd_hmm_untied/smallArabicASRDatabase.1-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/30.cd_hmm_untied/smallArabicASRDatabase.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.527803755899</p>
+<p class='result'>Baum welch starting for iteration: 2 (1 of 1) </p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/30.cd_hmm_untied/smallArabicASRDatabase.2-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/30.cd_hmm_untied/smallArabicASRDatabase.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -149.301636442467</p>
+<p class='result'>Convergence Ratio = 1.22616731343246</p>
+<p class='result'>Baum welch starting for iteration: 3 (1 of 1) </p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/30.cd_hmm_untied/smallArabicASRDatabase.3-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 2 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/30.cd_hmm_untied/smallArabicASRDatabase.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -148.933413962239</p>
+<p class='result'>Convergence Ratio = 0.368222480228184</p>
+<p class='result'>Baum welch starting for iteration: 4 (1 of 1) </p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/30.cd_hmm_untied/smallArabicASRDatabase.4-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 2 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/30.cd_hmm_untied/smallArabicASRDatabase.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -148.808259983426</p>
+<p class='result'>Convergence Ratio = 0.125153978812733</p>
+<p class='result'>Baum welch starting for iteration: 5 (1 of 1) </p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/30.cd_hmm_untied/smallArabicASRDatabase.5-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 2 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/30.cd_hmm_untied/smallArabicASRDatabase.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -148.732289636946</p>
+<p class='result'>Training completed after 5 iterations</p>
+<hr>
+<h3>MODULE: 40 Build Trees	(2022-12-25 12:17)</h3>
+<p class='phase'>Phase 1: Cleaning up old log files...</p>
+<p class='phase'>Phase 2: Make Questions</p>
+<p class='result'>make_quests <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.make_questions.log">Log File</a></p><p class='error'>ERROR: Subprocess failed with return code 0</p>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Tree building</p>
+<p class='result'>Processing each phone with each state</p>
+<p class='result'>f 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.f.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>f 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.f.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>f 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.f.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>l 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.l.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>l 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.l.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>l 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.l.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>E 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.E.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>E 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.E.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>E 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.E.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>< 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.<.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>< 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.<.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>< 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.<.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>b 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.b.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>b 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.b.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>b 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.b.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>g 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.g.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>g 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.g.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>g 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.g.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>y 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.y.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>y 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.y.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>y 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.y.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>v 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.v.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>v 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.v.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>v 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.v.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>> 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.>.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>> 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.>.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>> 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.>.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>H 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.H.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>H 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.H.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>H 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.H.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>m 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.m.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>m 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.m.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>m 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.m.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>h 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.h.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>h 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.h.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>h 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.h.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>p 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.p.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>p 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.p.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>p 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.p.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>w 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.w.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>w 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.w.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>w 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.w.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>t 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.t.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>t 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.t.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>t 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.t.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>T 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.T.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>T 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.T.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>T 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.T.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>' 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.'.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>' 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.'.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>' 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.'.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>d 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.d.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>d 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.d.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>d 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.d.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>q 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.q.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>q 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.q.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>q 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.q.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>S 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.S.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>S 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.S.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>S 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.S.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>k 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.k.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>k 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.k.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>k 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.k.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>s 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.s.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>s 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.s.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>s 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.s.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Y 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.Y.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Y 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.Y.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Y 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.Y.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>n 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.n.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>n 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.n.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>n 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.n.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>x 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.x.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>x 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.x.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>x 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.x.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>j 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.j.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>j 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.j.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>j 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.j.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>r 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.r.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>r 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.r.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>r 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.r.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>A 0 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.A.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>A 1 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.A.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>A 2 </p>
+<p class='result'>bldtree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/40.buildtrees/smallArabicASRDatabase.buildtree.A.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Skipping SIL</p>
+<hr>
+<h3>MODULE: 45 Prune Trees	(2022-12-25 12:17)</h3>
+<p class='result'>mk_mdef_gen <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/45.prunetree/smallArabicASRDatabase.build.alltriphones.mdef.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 1: Tree Pruning</p>
+<p class='result'>prunetree <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/45.prunetree/smallArabicASRDatabase.prunetree.200.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 2: State Tying</p>
+<p class='result'>tiestate <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/45.prunetree/smallArabicASRDatabase.tiestate.200.log">Log File</a></p><span class='status completed'>completed</span>
+<hr>
+<h3>MODULE: 50 Training Context dependent models	(2022-12-25 12:17)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Copy CI to CD initialize</p>
+<p class='result'>init_mixw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.copy.ci.2.cd.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.1.1-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.1.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.527803755899</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.1.2-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.1.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.148702348064</p>
+<p class='result'>Convergence Ratio = 0.379101407835151</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.1.3-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 2 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.1.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.083809267845</p>
+<p class='result'>Split Gaussians, increase by 1</p>
+<p class='result'>inc_comp <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.split_gaussians.1.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.083809267845</p>
+<p class='result'>Convergence Ratio = 0.0648930802192638</p>
+<p class='result'>Baum welch starting for 2 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.2.1-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 2 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.2.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.40354767184</p>
+<p class='result'>Baum welch starting for 2 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.2.2-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.2.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -149.914899258638</p>
+<p class='result'>Convergence Ratio = 0.488648413201815</p>
+<p class='result'>Baum welch starting for 2 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.2.3-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.2.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -149.581573091683</p>
+<p class='result'>Convergence Ratio = 0.333326166954947</p>
+<p class='result'>Baum welch starting for 2 Gaussian(s), iteration: 4 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.2.4-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.2.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -149.289095280582</p>
+<p class='result'>Convergence Ratio = 0.292477811101378</p>
+<p class='result'>Baum welch starting for 2 Gaussian(s), iteration: 5 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.2.5-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.2.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -149.123372784245</p>
+<p class='result'>Convergence Ratio = 0.165722496336542</p>
+<p class='result'>Baum welch starting for 2 Gaussian(s), iteration: 6 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.2.6-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.2.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -149.026626678276</p>
+<p class='result'>Split Gaussians, increase by 2</p>
+<p class='result'>inc_comp <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.split_gaussians.2.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -149.026626678276</p>
+<p class='result'>Convergence Ratio = 0.0967461059688048</p>
+<p class='result'>Baum welch starting for 4 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.4.1-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.4.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -149.312386009796</p>
+<p class='result'>Baum welch starting for 4 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.4.2-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.4.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -148.841286221563</p>
+<p class='result'>Convergence Ratio = 0.47109978823309</p>
+<p class='result'>Baum welch starting for 4 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.4.3-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.4.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -148.613484973896</p>
+<p class='result'>Convergence Ratio = 0.22780124766652</p>
+<p class='result'>Baum welch starting for 4 Gaussian(s), iteration: 4 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.4.4-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.4.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -148.365169968575</p>
+<p class='result'>Convergence Ratio = 0.248315005320563</p>
+<p class='result'>Baum welch starting for 4 Gaussian(s), iteration: 5 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.4.5-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.4.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -148.196491341224</p>
+<p class='result'>Convergence Ratio = 0.168678627351483</p>
+<p class='result'>Baum welch starting for 4 Gaussian(s), iteration: 6 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.4.6-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.4.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -148.098401539338</p>
+<p class='result'>Split Gaussians, increase by 4</p>
+<p class='result'>inc_comp <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.split_gaussians.4.4.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -148.098401539338</p>
+<p class='result'>Convergence Ratio = 0.0980898018859762</p>
+<p class='result'>Baum welch starting for 8 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.8.1-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.8.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -148.387475320785</p>
+<p class='result'>Baum welch starting for 8 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.8.2-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.8.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -147.937068449662</p>
+<p class='result'>Convergence Ratio = 0.45040687112342</p>
+<p class='result'>Baum welch starting for 8 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.8.3-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.8.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -147.741336744529</p>
+<p class='result'>Convergence Ratio = 0.19573170513263</p>
+<p class='result'>Baum welch starting for 8 Gaussian(s), iteration: 4 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.8.4-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.8.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -147.532884718057</p>
+<p class='result'>Convergence Ratio = 0.20845202647223</p>
+<p class='result'>Baum welch starting for 8 Gaussian(s), iteration: 5 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.8.5-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.8.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -147.384809428087</p>
+<p class='result'>Convergence Ratio = 0.148075289969825</p>
+<p class='result'>Baum welch starting for 8 Gaussian(s), iteration: 6 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.8.6-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/50.cd_hmm_tied/smallArabicASRDatabase.8.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -147.289944496401</p>
+<p>Training for 8 Gaussian(s) completed after 6 iterations</p>
+<hr>
+<h3>MODULE: 60 Lattice Generation	(2022-12-25 12:22)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 61 Lattice Pruning	(2022-12-25 12:22)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 62 Lattice Format Conversion	(2022-12-25 12:22)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 65 MMIE Training	(2022-12-25 12:22)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 90 deleted interpolation	(2022-12-25 12:22)</h3>
+<p>Skipped for continuous models</p>
+<hr>
+<h3>MODULE: DECODE Decoding using models previously trained	(2022-12-25 12:22)</h3>
+<p class='result'>Decoding 724 segments starting at 0 (part 1 of 1) </p>
+<p class='result'>pocketsphinx_batch <a href="file:///Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/smallArabicASRDatabase/logdir/decode/smallArabicASRDatabase-1-1.log">Log File</a></p><span class='status completed'>completed</span>
+<p>        Aligning results to find error rate</p>
+<p class='result'>SENTENCE ERROR: 29.7% (215/724)   WORD ERROR RATE: 30.0% (216/724)</p>
+<p class='result'>

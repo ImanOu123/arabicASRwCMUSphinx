@@ -1,0 +1,38 @@
+Current configuration:
+[NAME]		[DEFLT]	[VALUE]
+-allphones	no	no
+-cntthresh	0.00001	1.000000e-05
+-csplitmax	100	2000
+-csplitmin	1	1
+-csplitthr	8e-4	0.000000e+00
+-example	no	no
+-fullvar	no	no
+-help		no	no
+-meanfn			/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.cd_cont_untied/means
+-mixwfn			/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.cd_cont_untied/mixture_weights
+-moddeffn		/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.untied.mdef
+-mwfloor	1e-4	1.000000e-08
+-phone			e
+-psetfn			/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.tree_questions
+-ssplitmax	5	7
+-ssplitmin	1	1
+-ssplitthr	8e-4	0.000000e+00
+-state			0
+-stwt			1.0,0.05,0.0,
+-treefn			/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/trees/arabicASRDatabase.unpruned/e-0.dtree
+-ts2cbfn	.semi.	.cont.
+-varfloor	0.00001	1.000000e-05
+-varfn			/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.cd_cont_untied/variances
+
+INFO: main.c(223): Reading: /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.untied.mdef
+INFO: model_def_io.c(573): Model definition info:
+INFO: model_def_io.c(574): 198 total models defined (36 base, 162 tri)
+INFO: model_def_io.c(575): 792 total states
+INFO: model_def_io.c(576): 594 total tied states
+INFO: model_def_io.c(577): 108 total tied CI states
+INFO: model_def_io.c(578): 36 total tied transition matrices
+INFO: model_def_io.c(579): 4 max state/model
+INFO: model_def_io.c(580): 4 min state/model
+WARN: "main.c", line 145: No triphones involving e
+FATAL: "main.c", line 730: Initialization failed
+Sun Dec 25 11:52:14 2022

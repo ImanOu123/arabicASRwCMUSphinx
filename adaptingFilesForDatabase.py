@@ -42,8 +42,8 @@ for dir in dataPrepForDatabase.sortByUnderscoreNum(os.listdir("tempWav/mediaSpee
 shutil.rmtree("arabicASRDatabase/wav")
 shutil.copytree("tempWav/wav", "arabicASRDatabase/wav")
 
-shutil.copy2("tempWav/arabicASRDatabase_train.fileids", "arabicASRDatabase/etc/arabicASRDatabase_train.fileids")
-shutil.copy2("tempWav/arabicASRDatabase_test.fileids", "arabicASRDatabase/etc/arabicASRDatabase_test.fileids")
+# shutil.copy2("tempWav/arabicASRDatabase_train.fileids", "arabicASRDatabase/etc/arabicASRDatabase_train.fileids")
+# shutil.copy2("tempWav/arabicASRDatabase_test.fileids", "arabicASRDatabase/etc/arabicASRDatabase_test.fileids")
 
-shutil.copy2("tempWav/arabicASRDatabase_train.transcription", "arabicASRDatabase/etc/arabicASRDatabase_train.transcription")
-shutil.copy2("tempWav/arabicASRDatabase_test.transcription", "arabicASRDatabase/etc/arabicASRDatabase_test.transcription")
+# shutil.copy2("tempWav/arabicASRDatabase_train.transcription", "arabicASRDatabase/etc/arabicASRDatabase_train.transcription")
+# shutil.copy2("tempWav/arabicASRDatabase_test.transcription", "arabicASRDatabase/etc/arabicASRDatabase_test.transcription")

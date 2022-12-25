@@ -1,0 +1,31 @@
+Current configuration:
+[NAME]		[DEFLT]			[VALUE]
+-example	no			no
+-fullvar	no			no
+-help		no			no
+-meanfn					/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/means
+-mixwfn					/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/mixture_weights
+-moddeffn				/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.ci.mdef
+-niter		0			1
+-npermute	6			12
+-qstperstt	8			20
+-questfn				/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.tree_questions
+-tempfn		/tmp/TEMP.QUESTS	/tmp/TEMP.QUESTS
+-type					.cont.
+-varfloor	1.0e-08			1.000000e-08
+-varfn					/Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/variances
+
+INFO: main.c(792): Reading: /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_architecture/arabicASRDatabase.ci.mdef
+INFO: model_def_io.c(573): Model definition info:
+INFO: model_def_io.c(574): 36 total models defined (36 base, 0 tri)
+INFO: model_def_io.c(575): 144 total states
+INFO: model_def_io.c(576): 108 total tied states
+INFO: model_def_io.c(577): 108 total tied CI states
+INFO: model_def_io.c(578): 36 total tied transition matrices
+INFO: model_def_io.c(579): 4 max state/model
+INFO: model_def_io.c(580): 4 min state/model
+INFO: main.c(811): Reading: /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/mixture_weights
+INFO: s3mixw_io.c(117): Read /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/mixture_weights [108x1x1 array]
+INFO: s3gau_io.c(169): Read /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/means [108x1x1 array]
+INFO: s3gau_io.c(169): Read /Users/imano/Desktop/Internships/MADA/arabicASRwCMUSphinx/arabicASRDatabase/model_parameters/arabicASRDatabase.ci_cont/variances [108x1x1 array]
+Sun Dec 25 11:52:13 2022
